@@ -10,7 +10,7 @@ gem 'carrierwave'
 gem 'dicom'
 gem 'nifty-generators', :group => :development
 gem 'thin'
-gem 'dynamic_form'
+
 
 
 # Gems used only for assets and not required
