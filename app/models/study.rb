@@ -13,7 +13,7 @@ class Study < ActiveRecord::Base
     if obj.read?
       
       self.name = obj.value("0010,0010")
-      self.study_date = obj.value("0008,0020")
+      #self.study_date = obj.value("0008,0020")
       self.status = 'DICOM File'
     else
       self.name = 'Non-DICOM File'
