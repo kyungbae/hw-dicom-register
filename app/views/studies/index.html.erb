@@ -1,0 +1,17 @@
+<% title "Studies" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for study in @studies %>
+    <tr>
+      <td><%= study.name %></td>
+      <td><%= link_to "Show", study %></td>
+      <td><%= link_to "Edit", edit_study_path(study) %></td>
+      <td><%= link_to "Destroy", study, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Study", new_study_path %></p>

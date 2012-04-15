@@ -1,0 +1,14 @@
+<% title "Study" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @study.name %>
+</p>
+<p>
+
+</p>
+<p>
+  <%= link_to "Edit", edit_study_path(@study) %> |
+  <%= link_to "Destroy", @study, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", studies_path %>
+</p>
