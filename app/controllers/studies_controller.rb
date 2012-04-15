@@ -14,7 +14,7 @@ class StudiesController < ApplicationController
   def create
     @study = Study.new(params[:study])
     if @study.save
-      UserMailer.notice_to_doc(@study).deliver
+      NoticeMailer.notice_to_doc(@study).deliver
       redirect_to @study, :notice => "Successfully created study."
     else
       render :action => 'new'

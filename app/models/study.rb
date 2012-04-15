@@ -9,7 +9,7 @@ class Study < ActiveRecord::Base
   def extract_data_from_dicom
     obj = DICOM::DObject.read('public' + dicom_file.to_s)
     if obj.read?
-      self.name = obj.value("0010, 0010")
+      self.name = obj.value("0010,0010")
       #self.name = 'Yes baby'
     else
 
