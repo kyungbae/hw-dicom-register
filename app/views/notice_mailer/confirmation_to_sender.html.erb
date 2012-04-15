@@ -6,7 +6,14 @@
   <body>
     <h1>Hello,</h1>
     <p>
-      We got a DICOM file of <%= @study.name %>.<br/>
+      
+      <% if @study.status === 'DICOM File'%>
+      	We got a DICOM file of <%= @study.name %>.<br/>
+      <% else %>
+      	We got your file, however it was not a DICOM file. Can you check and upload it again?
+      <% end %>
+      
+      Thank you. 
     </p>
   </body>
 </html>

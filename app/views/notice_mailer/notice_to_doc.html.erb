@@ -6,7 +6,13 @@
   <body>
     <h1>Hello Dr. Evil,</h1>
     <p>
-      A new DICOM file of <%= @study.name %> has been uploaded. <br/>
+    	<% if @study.status === 'DICOM File' %>
+    	A new DICOM file of <%= @study.name %> has been uploaded. <br/>
+    	You can check the file at <a href="http://blazing-dawn-4586.herokuapp.com/studies">the site</a>
+    	<% else %>
+    	A new file has been uploaded, but it is not a DICOM file. We sent email to the sender to upload a correct DICOM file.
+    	<% end %>
+      Thank you.
     </p>
   </body>
 </html>
