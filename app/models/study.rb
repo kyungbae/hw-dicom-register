@@ -16,10 +16,10 @@ class Study < ActiveRecord::Base
       #self.study_date = obj.value("0008,0020")
       self.status = 'DICOM File'
     else
-      self.name = 'Non-DICOM File'
+      self.name = 'N/A'
       self.status = 'Non-DICOM File'
-      self.study_date = 'Non-DICOM File'
-      self.errors[:base] << 'Non-DICOM File'
+      self.study_date = 'N/A'
+
     end
   end
 
