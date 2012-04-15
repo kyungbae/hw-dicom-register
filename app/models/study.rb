@@ -12,8 +12,7 @@ class Study < ActiveRecord::Base
       self.name = obj.value("0010,0010")
       #self.name = 'Yes baby'
     else
-
-      #self.name = 'no way'
+      self.name = 'Not DICOM file'
     end
   end
 
