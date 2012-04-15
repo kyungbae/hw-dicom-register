@@ -5,7 +5,16 @@
   <%= @study.name %>
 </p>
 <p>
-
+	<strong>
+		Status:
+	</strong>
+	<%= @study.status %>
+</p>
+<p>
+	<strong>
+		Study Date:
+	</strong>
+	<%= @study.study_date %>
 </p>
 <p>
   <%= link_to "Edit", edit_study_path(@study) %> |
