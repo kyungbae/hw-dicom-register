@@ -4,8 +4,7 @@ class Study < ActiveRecord::Base
   
   validates :dicom_file, :presence => true
   validates :email, :presence => true, 
-    :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i },
-    :message => 'Check the email address again.'
+    :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
     
   
   before_save :extract_data_from_dicom
