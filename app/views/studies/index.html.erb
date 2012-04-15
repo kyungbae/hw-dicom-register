@@ -3,12 +3,14 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Sender Email</th>
     <th>Study Date</th>
     <th>Status</th>
   </tr>
   <% for study in @studies %>
     <tr>
       <td><%= study.name %></td>
+      <td><%= study.email %></td>
       <td><%= study.study_date %></td>
       <td><%= study.status %></td>
       <td><%= link_to "Show", study %></td>
